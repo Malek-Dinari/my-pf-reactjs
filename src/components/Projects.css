@@ -1,0 +1,11 @@
+.projects-container {
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.project-item {
+    border: 1px solid #dee2e6;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}

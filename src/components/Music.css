@@ -1,0 +1,12 @@
+.music-container {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.music-header {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,15 @@
+.navbar-container {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.navbar-link {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #f8f9fa;
+}

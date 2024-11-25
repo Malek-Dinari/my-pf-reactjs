@@ -6,9 +6,9 @@ const Skills = () => (
     <h2>Technical Skills</h2>
     <ul>
       <li>Programming: Python, Java, C++</li>
-      <li>Frameworks: TensorFlow, React.js, Spring Boot</li>
+      <li>Frameworks: TensorFlow, PyTorch, Angular, React.js, Spring Boot</li>
       <li>Machine Learning: NLP, Computer Vision, Deep Learning</li>
-      <li>Tools: Git, Docker, Jupyter Notebooks</li>
+      <li>Tools: Git, Docker, Jupyter/Colab/Kaggle Notebooks</li>
     </ul>
   </section>
 );

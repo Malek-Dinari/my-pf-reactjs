@@ -1,0 +1,16 @@
+.skills-container {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.skills-header {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.skill-item {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f1f3f5;
+    border-radius: 3px;
+}
