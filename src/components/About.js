@@ -10,7 +10,7 @@ const About = () => (
     </p>
     <p>
       Beyond coding and work, I love music and actively rate albums and tracks on 
-      <a href="https://rateyourmusic.com/~dinnarus" target="_blank" rel="noopener noreferrer">RateYourMusic</a>.
+      <a href="https://rateyourmusic.com/~dinnarus" target="_blank" rel="noopener noreferrer"> RateYourMusic</a>.
     </p>
   </section>
 );
