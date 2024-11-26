@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-import logo from "../assets/img/photo1me2024.jpeg";
+import logo from "../assets/img/leMEcin2024.jpg";
 import navIcon1 from "../assets/img/github-icon.png"; // Replace with your GitHub icon
 import navIcon2 from "../assets/img/linkedin-icon.png"; // Replace with your LinkedIn icon
 import navIcon3 from "../assets/img/rym-icon.jpeg"; // Replace with your RYM icon
@@ -68,13 +68,13 @@ const NavbarComponent = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://github.com/Malek-Dinari" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon1} alt="GitHub" />
+                <img src={navIcon1} alt="GitHub" style={{ width: '122px', height: '122px' }} />
               </a>
               <a href="https://www.linkedin.com/in/malek-dinari-99b431263/" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon2} alt="LinkedIn" />
+                <img src={navIcon2} alt="LinkedIn" style={{ width: '122px', height: '122px' }} />
               </a>
               <a href="https://rateyourmusic.com/~dinnarus" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon3} alt="RateYourMusic" />
+                <img src={navIcon3} alt="RateYourMusic" style={{ width: '122px', height: '122px' }} />
               </a>
             </div>
             <HashLink to="#connect">
