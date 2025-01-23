@@ -49,49 +49,51 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>Hi! I'm Malek Dinari <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Data Scientist", "Machine Learning Engineer", "AI Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
-                <p>
-                  I'm a Data Science & Computer Vision student passionate about AI, machine learning, and solving real-world problems. I specialize in NLP, face expression recognition, and advanced web development.
-                </p>
-                <button onClick={() => window.location.href = "#about"}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-                {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+      <div className="centered-banner"> {/* Add this wrapper */}
+        <Container>
+          <Row className="align-items-center">
+            <Col xs={12} md={6} xl={7}>
+              <TrackVisibility>
+                {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>Hi! I'm Malek Dinari <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Data Scientist", "Machine Learning Engineer", "AI Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>
+                    I'm a Data Science & Computer Vision student passionate about AI, machine learning, and solving real-world problems. I specialize in NLP, face expression recognition, and advanced web development.
+                  </p>
+                  <button onClick={() => window.location.href = "#about"}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                </div>}
+              </TrackVisibility>
+            </Col>
+            <Col xs={12} md={6} xl={5}>
+              <TrackVisibility>
+                  {({ isVisible }) => (
+                  <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                     <img
-                    src={require("../assets/img/photo1me2024.jpeg")}
-                    alt="Profile"
-                    style={{
+                      src={require("../assets/img/photo1me2024.jpeg")}
+                      alt="Profile"
+                      style={{
                         borderRadius: "15px", /* Smooth corners */
                         border: "2px solid #fff", /* Optional border */
                         boxShadow: "0 4px 8px rgba(0,0,0,0.2)", /* Optional shadow */
                         width: "100%", /* Adjust size */
-                    }}
+                      }}
                     />
-                </div>
-                )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img" />
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+                  </div>
+                  )}
+              </TrackVisibility>
+            </Col>
+            <Col xs={12} md={6} xl={5}>
+              <TrackVisibility>
+                {({ isVisible }) =>
+                  <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                    <img src={headerImg} alt="Header Img" />
+                  </div>}
+              </TrackVisibility>
+            </Col>
+          </Row>
+        </Container>
+      </div> {/* End of centered-banner wrapper */}
     </section>
   );
 };
