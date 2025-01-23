@@ -23,7 +23,7 @@ export const Newsletter = () => {
     // EmailJS credentials
     const serviceID = "service_dvaawdn"; // Replace with your actual Service ID
     const templateID = "template_s5hckqs"; // Replace with your actual Template ID
-    const userID = "QMR1ZIZCv6XgZIhLbc88"; // Replace with your actual User ID
+    const userID = "oUS5o_e6rWxdIUjva"; // Replace with your actual User ID
 
     try {
       // Send email using EmailJS
