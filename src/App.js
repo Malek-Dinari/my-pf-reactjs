@@ -8,11 +8,12 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Music from "./components/Music";
 import Contact from "./components/Contact";
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="centered-container">
         <Navbar />
         {/* Section-based navigation */}
         <Routes>
