@@ -1,51 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export const Newsletter = () => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState(""); // 'idle', 'sending', 'success', 'error'
+  const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    if (status === 'success') {
-      clearFields();
-    }
-  }, [status]);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || email.indexOf("@") === -1) {
-      setStatus('error');
-      setMessage('Please enter a valid email address.');
+    // Validate email
+    if (!email || !email.includes("@")) {
+      setStatus("error");
+      setMessage("Please enter a valid email address.");
       return;
     }
 
-    setStatus('sending');
-    setMessage('Sending...');
+    setStatus("sending");
+    setMessage("Sending...");
 
-  
-    const serviceID = 'service_dvaawdn';
-    const templateID = 'template_s5hckqs';
-    const userID = 'QMR1ZIZCv6XgZIhLbc88';
+    // EmailJS credentials
+    const serviceID = "service_dvaawdn"; // Replace with your actual Service ID
+    const templateID = "template_s5hckqs"; // Replace with your actual Template ID
+    const userID = "QMR1ZIZCv6XgZIhLbc88"; // Replace with your actual User ID
 
-    // Send email using EmailJS
-    emailjs.send(serviceID, templateID, { email }, userID)
-      .then((response) => {
-        console.log('Email sent successfully!', response);
-        setStatus('success');
-        setMessage('Thank you for subscribing!');
-      })
-      .catch((error) => {
-        console.error('Failed to send email:', error);
-        setStatus('error');
-        setMessage('Failed to send email. Please try again later.');
-      });
-  };
-
-  const clearFields = () => {
-    setEmail('');
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(serviceID, templateID, { email }, userID);
+      console.log("Email sent successfully!", response);
+      setStatus("success");
+      setMessage("Thank you for subscribing!");
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setStatus("error");
+      setMessage("Failed to send email. Please try again later.");
+    } finally {
+      // Reset the form after submission
+      setEmail("");
+    }
   };
 
   return (
@@ -53,10 +46,12 @@ export const Newsletter = () => {
       <div className="newsletter-bx wow slideInUp">
         <Row>
           <Col lg={12} md={6} xl={5}>
-            <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
-            {status === 'sending' && <Alert>Sending...</Alert>}
-            {status === 'error' && <Alert variant="danger">{message}</Alert>}
-            {status === 'success' && <Alert variant="success">{message}</Alert>}
+            <h3>
+              Subscribe to our Newsletter<br></br> & Never miss latest updates
+            </h3>
+            {status === "sending" && <Alert variant="info">Sending...</Alert>}
+            {status === "error" && <Alert variant="danger">{message}</Alert>}
+            {status === "success" && <Alert variant="success">{message}</Alert>}
           </Col>
           <Col md={6} xl={7}>
             <form onSubmit={handleSubmit}>
@@ -68,7 +63,9 @@ export const Newsletter = () => {
                   placeholder="Email Address"
                   required
                 />
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={status === "sending"}>
+                  {status === "sending" ? "Sending..." : "Submit"}
+                </button>
               </div>
             </form>
           </Col>
