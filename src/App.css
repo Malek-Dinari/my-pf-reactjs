@@ -28,29 +28,16 @@ html {
 }
 
 body {
-  background-color: black; /* Set the background to black */
-  color: white; /* Set default text color to white */
-  font-family: Centra, sans-serif; /* Ensure the custom font is applied */
   background-image: url('./assets/img/banner-bg.png');
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center center; /* Centers the image */
   background-attachment: fixed;
 }
 
-/************ Centered Banner ************/
-.centered-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure it takes the full viewport height */
-  text-align: center;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
-  color: white; /* Ensure headings are white */
 }
 
 p, a, li, button, ul {
@@ -58,7 +45,6 @@ p, a, li, button, ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
-  color: white; /* Ensure text is white */
 }
 
 a:hover {
@@ -72,7 +58,7 @@ img {
 
 button {
   border: 0;
-  background-color: transparent;
+  background-color: black;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -80,33 +66,18 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (min-width:1700px) {
-  main .container {
-    max-width: 100%;
-    padding: 0 150px;
-  }
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
 }
 
 p.success {
-  color: green;
+	color: green;
 }
 
 p.danger {
-  color: red;
-}
-
-/************ Centered Component ************/
-.centered-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure it takes the full viewport height */
-  background-color: black; /* Ensure the container background is black */
-}
-
-.centered-content {
-  text-align: center;
-  max-width: 800px; /* Adjust as needed */
-  padding: 20px;
+	color: red;
 }
 /****** icons socials ********/
 .social-icon {
@@ -180,7 +151,7 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #000;
     border-radius: 50%;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
@@ -204,7 +175,7 @@ span.navbar-text {
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
-	background-color: transparent;
+	background-color: black;
 	transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
@@ -215,7 +186,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: #000;
   left: 0;
   top: 0;
   z-index: -1;
@@ -252,7 +223,7 @@ nav.navbar .navbar-toggler-icon:before {
 	width: 24px;
 	position: absolute;
 	height: 2px;
-	background-color: #fff;
+	background-color: #000;
 	top: 0;
 	left: 0;
 	content: '';
@@ -264,12 +235,12 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 	transform: rotate(45deg);
-	background-color: #fff;
+	background-color: #000;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
+	background-color: #000;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -410,14 +381,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgb(0 0 0 / 10%);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
-  background-color: transparent;
+  background-color: black;
   border-radius: 0;
   padding: 17px 0;
   color: #fff;
@@ -554,7 +525,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button {
   font-weight: 700;
   color: #000;
-  background-color: #fff;
+  background-color: #000;
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
