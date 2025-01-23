@@ -28,27 +28,31 @@ html {
 }
 
 body {
-  background-image: url('./assets/img/banner-bg.png');
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center center; /* Centers the image */
-  background-attachment: fixed;
+  background-color: #121212; /* Black background */
+  color: #fff; /* White text */
+  font-family: Centra, sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
+  margin-bottom: 20px;
 }
 
-p, a, li, button, ul {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
+p {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #AA367C; /* Highlight color */
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  color: #4A2FBD; /* Secondary highlight color */
 }
 
 img {
@@ -82,8 +86,8 @@ p.danger {
 /****** icons socials ********/
 .social-icon {
   display: flex;
-  justify-content: center; /* Centers the icons */
-  gap: 15px; /* Adds spacing between icons */
+  justify-content: left;
+  gap: 15px;
 }
 
 .social-icon img {
@@ -100,15 +104,16 @@ p.danger {
 
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  padding: 10px 0; /* Reduced padding */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition: 0.32s ease-in-out;
 }
+
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 5px 0; /* Further reduced padding when scrolled */
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {

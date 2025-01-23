@@ -57,8 +57,8 @@ const NavbarComponent = () => {
               Skills
             </Nav.Link>
             <Nav.Link
-              as={Link}
-              to="/projects"
+              as={HashLink}
+              to="/#projects"
               className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
               onClick={() => onUpdateActiveLink("projects")}
             >
@@ -68,13 +68,13 @@ const NavbarComponent = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://github.com/Malek-Dinari" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon1} alt="GitHub" style={{ width: '122px', height: '122px' }} />
+                <img src={navIcon1} alt="GitHub" style={{ width: '32px', height: '32px' }} /> {/* Reduced size */}
               </a>
               <a href="https://www.linkedin.com/in/malek-dinari-99b431263/" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon2} alt="LinkedIn" style={{ width: '122px', height: '122px' }} />
+                <img src={navIcon2} alt="LinkedIn" style={{ width: '32px', height: '32px' }} /> {/* Reduced size */}
               </a>
               <a href="https://rateyourmusic.com/~dinnarus" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon3} alt="RateYourMusic" style={{ width: '122px', height: '122px' }} />
+                <img src={navIcon3} alt="RateYourMusic" style={{ width: '32px', height: '32px' }} /> {/* Reduced size */}
               </a>
             </div>
             <HashLink to="#connect">
